@@ -21,4 +21,7 @@ gem 'capistrano'
 gem 'rvm-capistrano'
 
 gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
-gem "rails-boilerplate"
+gem 'rails-boilerplate'
+group :test, :development do
+  gem 'rspec-rails'
+end
