@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-GruppotemaCom::Application.load_tasks
+HumanaMENTE::Application.load_tasks
