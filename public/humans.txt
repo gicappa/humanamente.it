@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  LeadDeveloper: gicappa a.k.a Gian Carlo Pace
+  Site: gianka.it
+  Twitter: @gicappa
+  Location: Milano, Italia/ San Francisco, California, USA
 
 /* THANKS */
   Names (& URL):
