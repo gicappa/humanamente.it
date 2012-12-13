@@ -4,13 +4,11 @@
   background: image-url($imageName) 50% 0 no-repeat fixed;
   height: 500px;
 }
-
 @mixin background-color($color) {
   background-color: $color;
   text-shadow: 0 -1px 1px darken($color, 30);
 
 }
-
 @mixin decorate-box() {
   border-top: 1px solid rgba(255,255,255,0.3);
   border-bottom: 1px solid rgba(0,0,0,0.4);
@@ -27,13 +25,27 @@ $contatti: #0088CC;
 
 body {
   font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
+  font-size: 160%;
   line-height: 1.3;
   color: white;
 }
-
 em {
   font-style: normal;
 }
+h1 {
+  font-size: 200%;
+}
+dl {
+  dt {
+    font-style: normal;
+
+    display: inline-block;
+    &:after {
+      content: ': ';
+    }
+  }
+}
+
 
 #welcome {
   @include text-content('tree.png');
@@ -66,6 +78,7 @@ em {
   top: 150px;
   @include opacity(96);
   @include border-radius(3px);
+  @include background-color($humanaColor);
 }
 .mission {
   @include background-color($missionColor);
@@ -87,32 +100,8 @@ em {
 }
 
 .box {
-  @include background-color($humanaColor);
   padding: 30px;
-  margin: 0;
-  font-size: 200%;
   @include decorate-box();
-
-
-  h1 {
-    font-size: 200%;
-  }
-
-  dl {
-    dt {
-      color: #f5be66;
-      font-style: normal;
-      text-shadow: 0 -1px 1px rgb(86, 64, 37);
-
-      display: inline-block;
-      &:after {
-        content: ': ';
-      }
-    }
-    dd {
-      display: block;
-    }
-  }
 }
 
 @font-face {
