@@ -7,7 +7,6 @@
 @mixin background-color($color) {
   background-color: $color;
   text-shadow: 0 -1px 1px darken($color, 30);
-
 }
 @mixin decorate-box() {
   border-top: 1px solid rgba(255,255,255,0.3);
@@ -21,7 +20,7 @@ $chiSiamo: #0088CC;
 $areeIntervento: #ff7733;
 $progettiOne: #0088CC;
 $progettiTwo: #ff7733;
-$contatti: #0088CC;
+$contatti: #333333;
 
 body {
   font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
@@ -45,13 +44,9 @@ dl {
   }
 }
 
-
 #welcome {
   @include text-content('tree.png');
   height: 1300px !important;
-}
-#chi-siamo {
-  @include text-content('sunset_1920x1080.jpg');
 }
 #aree-intervento {
   @include text-content('greenlake_1440x900.jpg');
@@ -61,6 +56,9 @@ dl {
 }
 #progetti-two {
   @include text-content('theoldfishinghut_1440x900.jpg');
+}
+#chi-siamo {
+  @include text-content('sunset_1920x1080.jpg');
 }
 #contatti {
   @include text-content('deepsilence_1920x1080.jpg');
@@ -82,9 +80,6 @@ dl {
 .mission {
   @include background-color($missionColor);
 }
-.chi-siamo {
-  @include background-color($chiSiamo);
-}
 .aree-intervento {
   @include background-color($areeIntervento);
 }
@@ -94,8 +89,12 @@ dl {
 .progetti-two {
   @include background-color($progettiTwo);
 }
+.chi-siamo {
+  @include background-color($chiSiamo);
+}
 .contatti {
   @include background-color($contatti);
+  height: 500px !important;
 }
 
 .box {
