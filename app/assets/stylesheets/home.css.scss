@@ -5,9 +5,28 @@
   height: 500px;
 }
 
+@mixin background-color($color) {
+  background-color: $color;
+  text-shadow: 0 -1px 1px darken($color, 30);
+
+}
+
+@mixin decorate-box() {
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+$missionColor: #ff7733;
+$humanaColor: #0088CC;
+
 body {
   font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
   color: white;
+}
+
+em {
+  font-style: normal;
 }
 
 #welcome {
@@ -34,43 +53,34 @@ body {
 
 .widebox {
   line-height: 1.3;
-  text-shadow: 0 -1px 1px #0e1f33;
-  background-color: #0088CC;
+  @include background-color($humanaColor);
   padding: 30px;
   margin: 0;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-bottom: 1px solid rgba(0,0,0,0.4);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  @include decorate-box();
 
   &.title {
     width: 70%;
     max-width: 600px;
     min-width: 395px;
     text-align: right;
-    @include opacity(96);
-    @include border-radius(3px);
     padding: 30px;
-
     margin: 0 10px;
     position: relative;
     top: 150px;
+    @include opacity(96);
+    @include border-radius(3px);
   }
+
   &.mission {
-    background-color: #ff7733;
-    @include border-radius(0);
-    margin: 0;
+    @include background-color($missionColor);
     em {
       color: #cc2888;
-      font-style: normal;
       text-shadow: 0 -1px 1px rgba(58, 13, 39, 0.88);
     }
   }
-
-  p {
-    font-size: 200%;
-  }
+  font-size: 200%;
   h1 {
-    font-size: 400%;
+    font-size: 200%;
   }
 
   dl {
@@ -89,17 +99,6 @@ body {
     }
   }
 }
-
-//.box {
-//  line-height: 1.2;
-//  text-shadow: 0 -1px 1px #0e1f33;
-//  background-color: #0088CC;
-//  @include opacity(96);
-//  @include border-radius(3px);
-//  padding: 30px;
-//  margin: 0 10px;
-//}
-
 
 @font-face {
   font-family: 'BreeSerifRegular';
