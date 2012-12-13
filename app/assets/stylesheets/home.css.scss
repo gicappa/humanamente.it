@@ -17,11 +17,17 @@
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
-$missionColor: #ff7733;
 $humanaColor: #0088CC;
+$missionColor: #ff7733;
+$chiSiamo: #0088CC;
+$areeIntervento: #ff7733;
+$progettiOne: #0088CC;
+$progettiTwo: #ff7733;
+$contatti: #0088CC;
 
 body {
   font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
+  line-height: 1.3;
   color: white;
 }
 
@@ -31,10 +37,9 @@ em {
 
 #welcome {
   @include text-content('tree.png');
-  height: 1120px !important;
+  height: 1300px !important;
 }
-
-#chisiamo {
+#chi-siamo {
   @include text-content('sunset_1920x1080.jpg');
 }
 #aree-intervento {
@@ -46,39 +51,49 @@ em {
 #progetti-two {
   @include text-content('theoldfishinghut_1440x900.jpg');
 }
-
 #contatti {
   @include text-content('deepsilence_1920x1080.jpg');
 }
 
-.widebox {
-  line-height: 1.3;
+.welcome {
+  width: 70%;
+  max-width: 600px;
+  min-width: 395px;
+  text-align: right;
+  padding: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 150px;
+  @include opacity(96);
+  @include border-radius(3px);
+}
+.mission {
+  @include background-color($missionColor);
+}
+.chi-siamo {
+  @include background-color($chiSiamo);
+}
+.aree-intervento {
+  @include background-color($areeIntervento);
+}
+.progetti-one {
+  @include background-color($progettiOne);
+}
+.progetti-two {
+  @include background-color($progettiTwo);
+}
+.contatti {
+  @include background-color($contatti);
+}
+
+.box {
   @include background-color($humanaColor);
   padding: 30px;
   margin: 0;
+  font-size: 200%;
   @include decorate-box();
 
-  &.title {
-    width: 70%;
-    max-width: 600px;
-    min-width: 395px;
-    text-align: right;
-    padding: 30px;
-    margin: 0 10px;
-    position: relative;
-    top: 150px;
-    @include opacity(96);
-    @include border-radius(3px);
-  }
 
-  &.mission {
-    @include background-color($missionColor);
-    em {
-      color: #cc2888;
-      text-shadow: 0 -1px 1px rgba(58, 13, 39, 0.88);
-    }
-  }
-  font-size: 200%;
   h1 {
     font-size: 200%;
   }
