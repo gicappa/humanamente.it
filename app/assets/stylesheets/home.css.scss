@@ -34,6 +34,13 @@ em {
 h1 {
   font-size: 200%;
 }
+
+a.btn {
+  color: white; // bootstrap should already be white.
+  font-size: 90%;
+  padding: 20px;
+  text-align: right;
+}
 dl {
   dt {
     font-style: normal;
