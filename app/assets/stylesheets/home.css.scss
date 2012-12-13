@@ -1,48 +1,64 @@
 @import "twitter/bootstrap/mixins.scss";
 
+@mixin text-content($imageName) {
+  background: image-url($imageName) 50% 0 no-repeat fixed;
+  height: 500px;
+}
+
 body {
   font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
+  color: white;
 }
-
-.story { height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
 
 #welcome {
-  background: image-url('tree.png') 50% 0 no-repeat fixed;
-  height: 1120px;
+  @include text-content('tree.png');
+  height: 1120px !important;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+#chisiamo {
+  @include text-content('sunset_1920x1080.jpg');
 }
-#mission {
-  //padding: 10px 0;
-  //background-color: white;
-  //height: 1120px;
-
+#aree-intervento {
+  @include text-content('greenlake_1440x900.jpg');
+}
+#progetti-one {
+  @include text-content('bluedawn_1440x900.jpg');
+}
+#progetti-two {
+  @include text-content('theoldfishinghut_1440x900.jpg');
 }
 
-.box {
-  line-height: 1.2;
-  color: white;
+#contatti {
+  @include text-content('deepsilence_1920x1080.jpg');
+}
+
+.widebox {
+  line-height: 1.3;
   text-shadow: 0 -1px 1px #0e1f33;
   background-color: #0088CC;
-  @include opacity(96);
-  @include border-radius(3px);
   padding: 30px;
-  margin: 0 10px;
+  margin: 0;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+
   &.title {
     width: 70%;
     max-width: 600px;
     min-width: 395px;
     text-align: right;
-    margin-top: 150px;
+    @include opacity(96);
+    @include border-radius(3px);
+    padding: 30px;
+
+    margin: 0 10px;
+    position: relative;
+    top: 150px;
   }
   &.mission {
     background-color: #ff7733;
     @include border-radius(0);
     margin: 0;
-    //font-size: 90%;
     em {
       color: #cc2888;
       font-style: normal;
@@ -56,17 +72,34 @@ footer, header, hgroup, menu, nav, section {
   h1 {
     font-size: 400%;
   }
+
+  dl {
+    dt {
+      color: #f5be66;
+      font-style: normal;
+      text-shadow: 0 -1px 1px rgb(86, 64, 37);
+
+      display: inline-block;
+      &:after {
+        content: ': ';
+      }
+    }
+    dd {
+      display: block;
+    }
+  }
 }
 
-.dropdown-menu li.fixed {
-  padding-left: 14px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  margin-top: 2px;
-  color: white;
-  background-color: #999;
-  font-style: italic;
-}
+//.box {
+//  line-height: 1.2;
+//  text-shadow: 0 -1px 1px #0e1f33;
+//  background-color: #0088CC;
+//  @include opacity(96);
+//  @include border-radius(3px);
+//  padding: 30px;
+//  margin: 0 10px;
+//}
+
 
 @font-face {
   font-family: 'BreeSerifRegular';
