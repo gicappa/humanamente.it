@@ -1,3 +1,4 @@
+require "bundler/capistrano"
 require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 set :application, "humanamente.it"
 set :repository,  "git@github.com:gicappa/humanamente.it.git"
@@ -48,10 +49,6 @@ namespace :deploy do
   end
 
   after "deploy:setup", "deploy:gems"
-
-  before "deploy", "deploy:web:disable"
-
-  after "deploy", "deploy:web:enable"
 
   desc "precompile the assets"
   task :precompile_assets, :roles => :web, :except => { :no_release => true } do
