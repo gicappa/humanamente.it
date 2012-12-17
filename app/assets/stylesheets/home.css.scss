@@ -79,20 +79,26 @@ dl {
   padding: 30px;
   margin: 0 10px;
   position: relative;
-  top: 150px;
+  top: 80px;
   @include opacity(96);
   @include border-radius(3px);
   @include background-color($humanaColor);
   &.beta {
-    margin: auto 20px;
-    padding:5px;
-    margin-top: 20px;
+    margin: 70px auto;
+
+    text-align: left;
+    padding:8px;
     @include background-color($missionColor);
     input {
       width: 80%;
     }
   }
 }
+
+small {
+  font-size: 80%;
+}
+
 .mission {
   @include background-color($missionColor);
 }
