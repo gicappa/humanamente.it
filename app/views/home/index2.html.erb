@@ -1,17 +1,32 @@
-<%= render partial: 'welcome' %>
-<%= render partial: 'mission' %>
-<section id="chi-siamo" data-speed="5" data-offsetY="-100px" data-type="background">
-</section>
-<%= render partial: 'aree_intervento' %>
-<section id="aree-intervento" data-offsetY="400px" data-speed="5" data-type="background">
-</section>
-<%= render partial: 'progetti_one' %>
-<section id="progetti-one" data-offsetY="400px" data-speed="5" data-type="background">
-</section>
-<%= render partial: 'progetti_two' %>
-<section id="progetti-two" data-offsetY="600px" data-speed="5" data-type="background">
-</section>
-<%= render partial: 'chi_siamo' %>
-<section id="contatti" data-offsetY="500px" data-speed="5" data-type="background">
-</section>
-<%= render partial: 'contatti' %>
+<div class="row-fluid">
+    <div class="span12">
+        <header>
+            <div class='logo'>HumanaMENTE</div>
+        </header>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <div id="projects" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <h2>Namasté</h2>
+
+                    <p>Spazio aperto di condivisione, confronto e supporto per le neo-mamme.</p>
+                    <img src="<%= image_path('carousel/image2.jpg') -%>">
+                </div>
+                <div class="item">
+                    <h2>Impronte</h2>
+
+                    <p>Il bambino dai 18 ai 36 mesi. Incontri di gruppo per genitori.</p>
+                    <img src="<%= image_path('carousel/image3.jpg') -%>">
+                </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#projects" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#projects" data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+</div>
+
