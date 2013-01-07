@@ -30,17 +30,31 @@ body {
 }
 
 header {
-
   .logo {
     background: image-url('tree_logo.png') no-repeat;
     margin-left: 70px;
     padding-top: 20px;
     height: 100px;
     padding-left: 110px;
+    font-size: 230%;
+    float:left;
   }
+  nav {
+    border-bottom: solid 2px $humanaColor;
+    width: 300px;
+    width: 60%;
+    float:left;
+    a {
+      color: black;
+    }
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+  font-size: 80%;
   background-color: white;
   width: 100%;
-  font-size: 230%;
   color: $humanaColor;
   -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
@@ -50,11 +64,22 @@ header {
 }
 
 .carousel{
-  margin-top: 90px;
+  position: fixed;
+  top: 90px;
   .item {
-    img {
-      width: 100%
+    background-attachment: fixed;
+    background-position: 50% 66px;
+    height: 200px;
+    width: 100%;
+    &.impronte {
+      background-url: image-url('carousel/image3.jpg');
     }
+    &.namaste {
+      background-url: image-url('carousel/image2.jpg');
+    }
+    //img {
+    //  width: 100%
+    //}
     text-shadow: 1px 1px 10px black;
     h2 {
       top: 40px;
@@ -72,7 +97,6 @@ header {
 
   }
 }
-
 
 em {
   font-style: normal;
