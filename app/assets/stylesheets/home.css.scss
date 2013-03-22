@@ -12,6 +12,7 @@
   -webkit-box-shadow: $box-shadow-definition;
   box-shadow: $box-shadow-definition;
 }
+
 $humanaColor: #0088CC;
 
 body {
@@ -23,17 +24,24 @@ body {
   color: #555;
 }
 
+a, a:hover, a:visited {
+  color: $humanaColor;
+
+}
+
 #emotional {
   height: 500px;
   width: 100%;
   background-image: image-url('carousel/image2.jpg');
   background-attachment: fixed;
-  background-position: fixed ;
+  background-position: fixed;
   background-repeat: no-repeat;
-  background-position: center ;
+  background-position: center;
   @include background-cover();
 
-  p { color: #333; }
+  p {
+    color: #333;
+  }
 }
 
 #action {
@@ -58,7 +66,7 @@ body {
 
 #mission {
   height: 470px;
-  background-color: $humanaColor;
+  background-color: #0088cc;
   color: white;
   padding-left: 220px;
   p {
@@ -76,16 +84,42 @@ body {
     width: 600px;
     font-size: 130%;
 
-    color: #00ffff;
+    text-shadow: 0 1px 0 #003651;
+
     font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
     font-style: italic;
   }
 }
-#law-and-newborn {
-  height: 500px;
-  background-color: white;
+
+@mixin project-box {
+  width: 300px;
+  height: 230px;
+  margin-bottom: 20px;
+
 }
+
+#law-and-newborn {
+  background-color: white;
+  margin: 0 auto;
+  width: 620px;
+  h1 {
+    text-align: center;
+    color: black;
+    font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
+    font-style: italic;
+  }
+  #borning {
+    float: left;
+    @include project-box;
+  }
+  #crisis {
+    float: right;
+    @include project-box;
+  }
+}
+
 #footer {
+  clear: both;
   padding: 20px 40px;
   color: white;
   font-size: 80%;
@@ -99,6 +133,7 @@ body {
     width: 600px;
   }
 }
+
 header {
   font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
   letter-spacing: -0.02em;
@@ -110,7 +145,7 @@ header {
   font-size: 80%;
   width: 100%;
   color: $humanaColor;
-  @include box-shadow(0 2px 10px 0 rgba(0, 0 ,0, 0.5));
+  @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
 
   img.logo {
     top: 0;
@@ -118,7 +153,7 @@ header {
     left: 16px;
     padding: 0 4px;
     background-color: white;
-    @include box-shadow(0 2px 10px 0 rgba(0, 0 ,0, 0.5));
+    @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
   }
 
   div.logo {
@@ -128,14 +163,17 @@ header {
     height: 48px;
     padding-left: 110px;
     font-size: 230%;
-    float:left;
+    float: left;
   }
 
   nav {
     margin-right: 10px;
     a {
       color: #555;
-      &:hover { color: $humanaColor; text-decoration: none }
+      &:hover {
+        color: $humanaColor;
+        text-decoration: none
+      }
     }
     li {
       float: left;
