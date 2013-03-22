@@ -1,0 +1,128 @@
+//@import "twitter/bootstrap/mixins.scss";
+//$humanaColor: #0088CC;
+//$missionColor: #ff7733;
+//$areeIntervento: #cc2888;
+//$progettiOne: #f5be66;
+//$progettiTwo: #b93f32;
+//$chiSiamo: #3e8f45;
+//$contatti: #333333;
+//
+//@mixin text-content($imageName) {
+//  background: image-url($imageName) 50% 0 no-repeat fixed;
+//  height: 500px;
+//}
+//@mixin background-color($color) {
+//  background-color: $color;
+//  text-shadow: 0 -1px 1px darken($color, 30);
+//}
+//@mixin decorate-box() {
+//  border-top: 1px solid rgba(255,255,255,0.3);
+//  border-bottom: 1px solid rgba(0,0,0,0.4);
+//  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+//}
+//
+//em {
+//  font-style: normal;
+//}
+//h1 {
+//  font-size: 200%;
+//}
+//
+//a.btn {
+//  color: white; // bootstrap should already be white.
+//  font-size: 90%;
+//  padding: 20px;
+//  text-align: right;
+//}
+//dl {
+//  dt {
+//    font-style: normal;
+//    display: inline-block;
+//    &:after {
+//      content: ': ';
+//    }
+//  }
+//}
+//
+//#welcome {
+//  @include text-content('tree.png');
+//  height: 1300px !important;
+//}
+//#aree-intervento {
+//  @include text-content('greenlake_1440x900.jpg');
+//}
+//#progetti-one {
+//  @include text-content('bluedawn_1440x900.jpg');
+//}
+//#progetti-two {
+//  @include text-content('theoldfishinghut_1440x900.jpg');
+//}
+//#chi-siamo {
+//  @include text-content('sunset_1920x1080.jpg');
+//}
+//#contatti {
+//  @include text-content('deepsilence_1920x1080.jpg');
+//}
+//
+//.welcome {
+//  width: 70%;
+//  max-width: 600px;
+//  min-width: 395px;
+//  text-align: right;
+//  padding: 30px;
+//  margin: 0 10px;
+//  position: relative;
+//  top: 80px;
+//  @include opacity(96);
+//  @include border-radius(3px);
+//  @include background-color($humanaColor);
+//  &.beta {
+//    margin: 70px auto;
+//
+//    text-align: left;
+//    padding:8px;
+//    @include background-color($missionColor);
+//    input {
+//      width: 80%;
+//    }
+//    a {
+//
+//    }
+//  }
+//}
+//
+//small {
+//  font-size: 80%;
+//}
+//
+//.mission {
+//  @include background-color($missionColor);
+//}
+//.aree-intervento {
+//  @include background-color($areeIntervento);
+//}
+//.progetti-one {
+//  @include background-color($progettiOne);
+//}
+//.progetti-two {
+//  @include background-color($progettiTwo);
+//}
+//.chi-siamo {
+//  @include background-color($chiSiamo);
+//}
+//.contatti {
+//  @include background-color($contatti);
+//  height: 500px !important;
+//}
+//
+//img.emotional {
+//  width: 100%;
+//  //position: absolute;
+//  top: 40px;
+//  //z-index: 10;
+//}
+//
+//.box {
+//  padding: 30px;
+//  @include decorate-box();
+//}

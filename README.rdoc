@@ -1,3 +1,19 @@
 == humanamente.it
 Website for Psycologist a Lawyer services. 
 Created by Gian Carlo Pace in open source.
+
+
+== Technical details
+
+= Form
+Nome
+Cognome
+Data Nascita
+M/F
+Privacy
+EMail
+Aree di interesse (textarea)
+Suggerimenti (textarea)
+
+Link e mi piace su FB
+payoff = acolto, pensiero, parola per la famiglia.
