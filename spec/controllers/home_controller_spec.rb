@@ -9,11 +9,4 @@ describe HomeController do
     get :index2
     expect(response).to be_success
   end
-  describe "beta email registering" do
-    before { post :create, beta_user: {email: 'user@beta.it'} }
-  end
-  it "sends the beta user's email to the staff" do
-    WelcomeMailer.mock(:register_beta_user)
-
-  end
 end
