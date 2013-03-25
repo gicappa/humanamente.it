@@ -3,5 +3,4 @@ class HomeController < ApplicationController
   end
   def index2
   end
-
 end

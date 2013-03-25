@@ -13,7 +13,30 @@
   box-shadow: $box-shadow-definition;
 }
 
+@mixin transform($transformation) {
+  transform: $transformation;
+  -ms-transform: $transformation;
+  -moz-transform: $transformation;
+  -webkit-transform: $transformation;
+  -o-transform: $transformation;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+@mixin project-box {
+  width: 300px;
+  height: 230px;
+  margin-bottom: 20px;
+}
+
 $humanaColor: #0088CC;
+$humanaColorComplementary: #f89406;
 
 body {
   font-family: Georgia, Palatino, serif;
@@ -24,9 +47,62 @@ body {
   color: #555;
 }
 
-a, a:hover, a:visited {
+a, a:visited {
   color: $humanaColor;
+  @include transition(color 0.2s);
+}
 
+a:hover {
+  color: $humanaColorComplementary;
+  text-decoration: none;
+}
+
+header {
+  font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  display: inline-block;
+  min-width: 925px;
+  font-size: 80%;
+  width: 100%;
+  color: $humanaColor;
+  @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
+
+  img.logo {
+    top: 0;
+    position: absolute;
+    left: 16px;
+    padding: 0 4px;
+    background-color: white;
+    @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
+    @include transition(rotation 0.2s ease-in-out);
+
+    &:hover {
+      @include transform(rotate(-5deg));
+    }
+  }
+
+  div.logo {
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-top: 18px;
+    height: 48px;
+    padding-left: 110px;
+    font-size: 230%;
+    float: left;
+  }
+
+  nav {
+    margin-right: 10px;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+    padding-right: 10px;
+    margin-top: 28px;
+  }
 }
 
 #emotional {
@@ -35,7 +111,9 @@ a, a:hover, a:visited {
   background-repeat: no-repeat;
   background-position: center 50px;
   @include background-cover();
-  p { color: #333; }
+  p {
+    color: #333;
+  }
 }
 
 #action {
@@ -65,11 +143,9 @@ a, a:hover, a:visited {
   padding-left: 220px;
   p {
     font-size: 70%;
-
     margin-top: 20px;
     line-height: 1.2em;
     width: 600px;
-
   }
 
   .main-quotation {
@@ -81,13 +157,6 @@ a, a:hover, a:visited {
     font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
     font-style: italic;
   }
-}
-
-@mixin project-box {
-  width: 300px;
-  height: 230px;
-  margin-bottom: 20px;
-
 }
 
 #projects {
@@ -113,7 +182,6 @@ a, a:hover, a:visited {
 #footer {
   float: left;
   text-align: right;
-
   width: 100%;
   color: white;
   font-size: 80%;
@@ -127,56 +195,6 @@ a, a:hover, a:visited {
       font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
       letter-spacing: -0.02em;
     }
-  }
-}
-
-header {
-  font-family: BreeSerifRegular, 'Bree Serif', 'Rockwell', serif;
-  letter-spacing: -0.02em;
-  position: absolute;
-  top: 0;
-  background-color: white;
-  display: inline-block;
-  min-width: 925px;
-  font-size: 80%;
-  width: 100%;
-  color: $humanaColor;
-  @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
-
-  img.logo {
-    top: 0;
-    position: absolute;
-    left: 16px;
-    padding: 0 4px;
-    background-color: white;
-    @include box-shadow(0 2px 10px 0 rgba(0, 0, 0, 0.5));
-  }
-
-  div.logo {
-    margin-left: 20px;
-    margin-right: 10px;
-    padding-top: 18px;
-    height: 48px;
-    padding-left: 110px;
-    font-size: 230%;
-    float: left;
-  }
-
-  nav {
-    margin-right: 10px;
-    a {
-      color: #555;
-      &:hover {
-        color: $humanaColor;
-        text-decoration: none
-      }
-    }
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-    padding-right: 10px;
-    margin-top: 28px;
   }
 }
 
