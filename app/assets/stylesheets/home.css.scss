@@ -182,11 +182,10 @@ header {
 }
 
 #projects {
+  h2 { text-align: center; }
   background-color: white;
-  margin: 0 20%;
-  h2 {
-    text-align: center;
-  }
+  padding: 0 20%;
+  height: 290px;
   #borning {
     float: left;
     @include project-box;
@@ -206,6 +205,7 @@ header {
   padding-bottom: 70px;
   padding: 0 auto;
   clear: both;
+
   .my-container{
     display: inline-table ;
   }
@@ -213,10 +213,10 @@ header {
   .member {
     float: left;
     color: white;
-    width: 270px;
+    width: 230px;
     margin: 10px;
 
-    h3 {
+    h4 {
       a, a:visited {
         color: white;
         @include transition(color 0.2s);
@@ -227,15 +227,13 @@ header {
         text-decoration: none;
       }
     }
-
     padding: 10px;
     background: rgba(0,0,0,0.7);
     color: #ddd;
     @include rounded-box(3px);
     @include box-shadow(0 0 10px 0 #002b46);
 
-    h5 {
-      font-family: 'Bree Serif', 'Rockwell', serif;
+    h6 {
       text-transform: capitalize;
       color: $humanaColor;
       text-shadow: 0 -1px 0 rgba(0, 155, 217, 0.38);
