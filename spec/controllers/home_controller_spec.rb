@@ -6,7 +6,7 @@ describe HomeController do
     expect(response).to be_success
   end
   it "retrieves correctly to the beta homepage" do
-    get :index2
+    get :home
     expect(response).to be_success
   end
 end
