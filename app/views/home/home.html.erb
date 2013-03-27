@@ -21,7 +21,7 @@
     <h3>ascolto, pensiero, parola per la famiglia.</h3>
 
     <p>servizi di psicologia clinica rivolti al benessere della famiglia</p>
-    <a class='btn btn-large btn-warning'>Iscriviti!</a>
+    <a class='btn btn-large btn-warning' href="#register" role="button" data-toggle="modal">Iscriviti!</a>
 </section>
 
 <section id='mission'>
@@ -53,12 +53,14 @@
 
 <section id='contacts'>
     <h2 class='barocco'>Contatti</h2>
+
     <p class='lead'>
         Siamo in
         <em><a href="http://goo.gl/maps/MUkXU" target='_blank'>Vicolo degli Orti 2 - 21013 Gallarate VA</a></em>
         e potete contattarci via email a <em><a href="mailto:gruppo@humanamente.it">gruppo@humanamente.it</a></em>
         e controllare la nostra
-        <em><a href="https://www.facebook.com/pages/Humanamente/599907073372080" target='_blank'>pagina facebook</a></em>
+        <em><a href="https://www.facebook.com/pages/Humanamente/599907073372080" target='_blank'>pagina
+            facebook</a></em>
         per aggiornamenti sui prossimi incontri.
     </p>
 </section>
@@ -81,30 +83,70 @@
             <h4><a href="mailto:elisa.boldrin@humanamente.it" target="_blank">Elisa Bordin</a></h4>
             <h6>Psicologa, Psicoterapeuta</h6>
 
-            <p><small>Esercita nell’area della Psicologia Clinica e dell’Età Evolutiva. Esperta in Psicologia Perinatale per
-                l’accompagnamento di mamme e papà verso una “nascita genitoriale”.</small></p>
+            <p>
+                <small>Esercita nell’area della Psicologia Clinica e dell’Età Evolutiva. Esperta in Psicologia
+                    Perinatale per
+                    l’accompagnamento di mamme e papà verso una “nascita genitoriale”.
+                </small>
+            </p>
         </div>
         <div class='member'>
             <h4><a href="mailto:alessia.pinolini@humanamente.it" target="_blank">Alessia Pinolini</a></h4>
             <h6>Psicologa clinica</h6>
 
-            <p><small>Esperta nel supporto alla genitorialità e nella progettazione di interventi psicoeducativi. Consulente
-                Tecnico
-                di Parte in casi di separazione, divorzio e affido dei minori.</small></p>
+            <p>
+                <small>Esperta nel supporto alla genitorialità e nella progettazione di interventi psicoeducativi.
+                    Consulente
+                    Tecnico
+                    di Parte in casi di separazione, divorzio e affido dei minori.
+                </small>
+            </p>
         </div>
         <div class='member'>
             <h4><a href="mailto:savina.bandera@humanamente.it" target="_blank">Savina Bandera</a></h4>
             <h6>Avvocato</h6>
 
-            <p><small>Avvocato del Foro di Busto Arsizio, si occupa di Diritto di Famiglia, Minorile e delle Persone; Curatore
-                Speciale del minore in procedimenti di adottabilità.</small></p>
+            <p>
+                <small>Avvocato del Foro di Busto Arsizio, si occupa di Diritto di Famiglia, Minorile e delle Persone;
+                    Curatore
+                    Speciale del minore in procedimenti di adottabilità.
+                </small>
+            </p>
         </div>
         <div class='member'>
             <h4><a href="mailto:manuela.caprioli@humanamente.it" target="_blank">Manuela Caprioli</a></h4>
             <h6>Educatrice</h6>
 
-            <p><small>Esercita nell’ambito della prevenzione del disagio affiancando i minori nei loro percorsi di crescita e
-                supportando gli adulti nel ruolo genitoriale.</small></p>
+            <p>
+                <small>Esercita nell’ambito della prevenzione del disagio affiancando i minori nei loro percorsi di
+                    crescita e
+                    supportando gli adulti nel ruolo genitoriale.
+                </small>
+            </p>
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div id="register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+    <%= twitter_bootstrap_form_for @customer, html: {class: 'form-horizontal'} do |f| %>
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="registerLabel">Iscrizione</h3>
+        </div>
+        <div class="modal-body">
+
+            <%= f.text_field :name, "Nome", :placeholder => 'Mario' %>
+            <%= f.text_field :surname, "Cognome", :placeholder => 'Rossi' %>
+            <%= f.email_field :email, "Email", :placeholder => 'me@example.com' %>
+            <%= f.text_field :birthdate, "Data di nascita" %>
+
+        </div>
+        <div class="modal-footer">
+            <%= f.actions do %>
+                <%= f.submit 'Iscrivimi', class: 'btn btn-warning' %>
+                <%= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
+            <% end %>
+        </div>
+    <% end %>
+</div>
