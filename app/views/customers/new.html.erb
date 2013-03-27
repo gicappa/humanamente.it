@@ -1,9 +1,19 @@
-<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> yyyyyyyy" unless @customer %>
-
-<%= twitter_bootstrap_form_for @customer do |f| %>
-    <%= f.email_field :email, :placeholder => 'me@example.com' %>
-    <%= f.actions do %>
-        <%= f.submit 'Sign up' %>
-        <%= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
+<%= twitter_bootstrap_form_for @customer, html: {class: 'form-horizontal'} do |f| %>
+    <%= f.inputs 'Registrazione'  do %>
+        <%= f.text_field :name, "Nome", :placeholder => 'Mario' %>
+        <%= f.text_field :surname, "Cognome", :placeholder => 'Rossi' %>
+        <%= f.email_field :email, "Email", :placeholder => 'me@example.com' %>
+        <%= f.text_field :birthdate, "Data di nascita" %>
+        <%= f.actions do %>
+            <%= f.submit 'Sign up' %>
+            <%= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
+        <% end %>
     <% end %>
 <% end %>
+
+
+<!--t.string :sex-->
+<!--t.boolean :privacy-->
+<!--t.text :interests-->
+<!--t.text :suggestions-->
+<!--t.timestamps-->
