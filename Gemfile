@@ -23,6 +23,7 @@ gem 'rvm-capistrano'
 gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
 gem 'rails-boilerplate'
 gem 'devise'
+gem 'twitter_bootstrap_form_for'
 
 group :test, :development do
   gem 'rspec-rails'

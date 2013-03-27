@@ -1,0 +1,9 @@
+<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> yyyyyyyy" unless @customer %>
+
+<%= twitter_bootstrap_form_for @customer do |f| %>
+    <%= f.email_field :email, :placeholder => 'me@example.com' %>
+    <%= f.actions do %>
+        <%= f.submit 'Sign up' %>
+        <%= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
+    <% end %>
+<% end %>
