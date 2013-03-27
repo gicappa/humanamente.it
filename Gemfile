@@ -25,6 +25,8 @@ gem 'rails-boilerplate'
 gem 'devise'
 gem 'twitter_bootstrap_form_for'
 
+gem 'activeadmin'
+gem 'meta_search',    '>= 1.1.0.pre'
 group :test, :development do
   gem 'rspec-rails'
 end
