@@ -183,25 +183,44 @@ header {
   background-image: image-url('genitorialita.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
-
+  min-width: 520px;
   h3.parenthood {
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     a {
       color: white;
+      span {
+        white-space: nowrap;
+      }
     }
-
+    white-space: wrap;
   }
   background-color: white;
   padding: 0 20%;
   height: 443px;
   #borning {
+    width: 30%;
+    min-width: 156px;
     float: left;
-    padding-top: 278px;
+    margin-top: 278px;
+    padding: 0 30px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ddd;
+    @include rounded-box(3px);
+    @include box-shadow(0 0 10px 0 #444);
+
   }
   #crisis {
+    width: 30%;
+    min-width: 156px;
     float: right;
-    padding-top: 278px;
+    margin-top: 278px;
+    padding: 0 30px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ddd;
+    @include rounded-box(3px);
+    @include box-shadow(0 0 10px 0 #444);
+
   }
 }
 
