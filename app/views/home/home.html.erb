@@ -8,8 +8,8 @@
             <li><a href="#emotional">home</a></li>
             <li><a href="#mission">mission</a></li>
             <li><a href="#projects">progetti</a></li>
-            <li><a href="#team">team</a></li>
             <li><a href="#contacts">contatti</a></li>
+            <li><a href="#team">team</a></li>
         </ul>
     </nav>
 
@@ -80,7 +80,7 @@
             </p>
         </div>
         <div class='member'>
-            <h4><a href="mailto:elisa.boldrin@humanamente.it" target="_blank">Elisa Bordin</a></h4>
+            <h4><a href="mailto:elisa.bordin@humanamente.it" target="_blank">Elisa Bordin</a></h4>
             <h6>Psicologa, Psicoterapeuta</h6>
 
             <p>
@@ -126,10 +126,9 @@
         </div>
     </div>
 </section>
-
 <!-- Modal -->
 <div id="register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-    <%= twitter_bootstrap_form_for @customer, html: {class: 'form-horizontal'} do |f| %>
+    <%= twitter_bootstrap_form_for @customer, html: {class: "form-horizontal"}, remote: true do |f| %>
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h3 id="registerLabel">Iscrizione</h3>
@@ -139,8 +138,14 @@
             <%= f.text_field :name, "Nome", :placeholder => 'Mario' %>
             <%= f.text_field :surname, "Cognome", :placeholder => 'Rossi' %>
             <%= f.email_field :email, "Email", :placeholder => 'me@example.com' %>
-            <%= f.text_field :birthdate, "Data di nascita" %>
-
+            <%= f.date_select :birthdate, "Data di nascita", {}, class: 'x-small' %>
+            <%= f.toggles "Sesso" do %>
+                <%= f.radio_button :sex, "Maschio", :m %>
+                <%= f.radio_button :sex, "Femmina", :f %>
+            <% end %>
+            <%= f.toggles "Privacy" do %>
+                <%= f.check_box :privacy,   'Sottoscrivo le condizioni della privacy' %>
+            <% end %>
         </div>
         <div class="modal-footer">
             <%= f.actions do %>
