@@ -1,29 +1,21 @@
 <!-- Modal -->
 <div id="register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-    <%= twitter_bootstrap_form_for @customer, html: {class: "form-horizontal"}, remote: true do |f| %>
+    <%= bootstrap_form_for @customer, html: {class: "form-horizontal"}, remote: true do |f| %>
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h3 id="registerLabel">Iscrizione</h3>
         </div>
         <div class="modal-body">
-
-            <%= f.text_field :name, "Nome", :placeholder => 'Mario' %>
-            <%= f.text_field :surname, "Cognome", :placeholder => 'Rossi' %>
-            <%= f.email_field :email, "Email", :placeholder => 'me@example.com' %>
-            <%= f.date_select :birthdate, "Data di nascita", {}, class: 'x-small' %>
-            <%= f.toggles "Sesso" do %>
-                <%= f.radio_button :sex, "Maschio", :m %>
-                <%= f.radio_button :sex, "Femmina", :f %>
-            <% end %>
-            <%= f.toggles "Privacy" do %>
-                <%= f.check_box :privacy,   'Sottoscrivo le condizioni della privacy' %>
-            <% end %>
+            <%= f.text_field :name, placeholder: 'Mario', help_inline: '' %>
+            <%= f.text_field :surname, placeholder: 'Rossi', help_inline: '' %>
+            <%= f.email_field :email, placeholder: 'me@example.com', help_inline: '' %>
+            <%= f.date_select :birthdate  %>
+            <%= f.radio_buttons :sex, { "Maschio" => "m", "Femmina" => "f" }, { :inline => true } %>
+            <%= f.check_box :privacy %>
         </div>
         <div class="modal-footer">
-            <%= f.actions do %>
-                <%= f.submit 'Iscrivimi', class: 'btn btn-warning' %>
-                <%= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
-            <% end %>
+            <%= f.submit 'Iscrivimi', class: 'btn btn-warning' %>
+            <%= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
         </div>
     <% end %>
 </div>

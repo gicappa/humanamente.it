@@ -1,0 +1,4 @@
+<% @customer.errors.each do |key, value| %>
+    $('.control-group').removeClass("error").find('.help-inline').empty();
+    $('#customer_<%= key %>').closest('.control-group').addClass('error').find('.help-inline').text('<%= j value.html_safe %>');
+<% end %>

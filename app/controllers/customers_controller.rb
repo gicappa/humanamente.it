@@ -11,12 +11,12 @@ class CustomersController < ApplicationController
       if @customer.save
         redirect_to home_url
       else
-        format.js { render :json => { :error => @customer.errors.full_messages.to_sentence },
-                           :status => :unprocessable_entity
-        }
-        format.json { render :json => { :error => @customer.errors.full_messages.to_sentence },
-                           :status => :unprocessable_entity
-        }
+        format.js #{ render :json => { :error => @customer.errors.full_messages.to_sentence },
+                   #        :status => :unprocessable_entity
+        #}
+        #format.json { render :json => { :error => @customer.errors.full_messages.to_sentence },
+        #                   :status => :unprocessable_entity
+        #}
         format.html { render :new }
       end
     end
