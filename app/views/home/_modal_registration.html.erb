@@ -9,8 +9,8 @@
             <%= f.text_field :name, placeholder: 'Mario', help_inline: '' %>
             <%= f.text_field :surname, placeholder: 'Rossi', help_inline: '' %>
             <%= f.email_field :email, placeholder: 'me@example.com', help_inline: '' %>
-            <%= f.date_select :birthdate  %>
-            <%= f.radio_buttons :sex, { "Maschio" => "m", "Femmina" => "f" }, { :inline => true } %>
+            <%= f.text_field :birthdate, class: 'format_datetime'  %>
+            <%= f.radio_buttons :sex, { t(:male) => "m", t(:female) => "f" }, { :inline => true } %>
             <%= f.check_box :privacy %>
         </div>
         <div class="modal-footer">

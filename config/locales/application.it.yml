@@ -1,7 +1,7 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+it:
   male: 'maschio'
   female: 'femmina'
   activerecord:
@@ -12,26 +12,10 @@ en:
         birthdate: 'Anno di nascita'
         sex: 'Sesso'
         privacy: 'Occorre accettare la privacy'
+        created_at: 'Creato'
+        updated_at: 'Modificato'
   bootstrap_forms:
     errors:
       header: 'Your %{model} is wrong!'
     buttons:
       cancel: 'Forget it!'
-## Sample localization file for English. Add more files in this directory for other locales.
-## See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-#
-#en:
-#  male: 'male'
-#  female: 'female'
-#  activerecord:
-#    attributes:
-#      customer:
-#        name: 'Name'
-#        surname: 'Surname'
-#        birthdate: 'Birth Year'
-#        sex: 'Sex'
-#  bootstrap_forms:
-#    errors:
-#      header: 'Your %{model} is wrong!'
-#    buttons:
-#      cancel: 'Forget it!'

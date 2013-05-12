@@ -18,4 +18,6 @@
     $(function(){
         $('nav li a').scrollToAnchor();
     });
+
+    $('.format_datetime').datetimepicker({language: "it"});
 })(jQuery);

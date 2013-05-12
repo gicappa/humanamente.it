@@ -1,13 +1,6 @@
 class Customer < ActiveRecord::Base
   validates_uniqueness_of :email
-  #t.string :email
-  #t.string :name
-  #t.string :surname
-  #t.datetime :birthdate
-  #t.string :sex
-  #t.boolean :privacy
-  #t.text :interests
-  #t.text :suggestions
-  #t.timestamps
-
+  validates_presence_of :email
+  validates_presence_of :name
+  validates_presence_of :surname
 end

@@ -15,4 +15,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require parallax-scrolling
+//= require bootstrap-datetimepicker
+//= require locales/bootstrap-datetimepicker.it.js
 //= require_tree .

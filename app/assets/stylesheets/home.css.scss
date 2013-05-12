@@ -181,49 +181,49 @@ header {
 }
 
 #projects {
-  @include background-size(cover);
-  background-image: image-url('genitorialita.jpg');
-  background-repeat: no-repeat;
-  background-position: center 0;
-  min-width: 520px;
-  h3.parenthood {
-    text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    a {
-      color: white;
-      span {
-        white-space: nowrap;
-      }
-    }
-    white-space: wrap;
-  }
+  //@include background-size(cover);
+  //background-image: image-url('genitorialita.jpg');
+  //background-repeat: no-repeat;
+  //background-position: center 0;
+  //min-width: 520px;
+  //h3.parenthood {
+  //  text-align: center;
+  //  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  //  a {
+  //    color: white;
+  //    span {
+  //      white-space: nowrap;
+  //    }
+  //  }
+  //  white-space: wrap;
+  //}
   background-color: white;
   padding: 0 20%;
-  height: 443px;
-  #borning {
-    width: 30%;
-    min-width: 156px;
-    float: left;
-    margin-top: 328px;
-    padding: 0 30px;
-    background: rgba(0, 0, 0, 0.3);
-    color: #ddd;
-    @include rounded-box(3px);
-    @include box-shadow(0 0 10px 0 #444);
-
-  }
-  #crisis {
-    width: 30%;
-    min-width: 156px;
-    float: right;
-    margin-top: 328px;
-    padding: 0 30px;
-    background: rgba(0, 0, 0, 0.3);
-    color: #ddd;
-    @include rounded-box(3px);
-    @include box-shadow(0 0 10px 0 #444);
-
-  }
+  //height: 443px;
+  //#borning {
+  //  width: 30%;
+  //  min-width: 156px;
+  //  float: left;
+  //  margin-top: 328px;
+  //  padding: 0 30px;
+  //  background: rgba(0, 0, 0, 0.3);
+  //  color: #ddd;
+  //  @include rounded-box(3px);
+  //  @include box-shadow(0 0 10px 0 #444);
+  //
+  //}
+  //#crisis {
+  //  width: 30%;
+  //  min-width: 156px;
+  //  float: right;
+  //  margin-top: 328px;
+  //  padding: 0 30px;
+  //  background: rgba(0, 0, 0, 0.3);
+  //  color: #ddd;
+  //  @include rounded-box(3px);
+  //  @include box-shadow(0 0 10px 0 #444);
+  //
+  //}
 }
 
 #team {
@@ -287,7 +287,12 @@ header {
 }
 
 #register {
-  font-size: 85%;
+  form {
+    margin: 0;
+    .control-group {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 @font-face {
