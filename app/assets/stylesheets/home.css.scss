@@ -206,10 +206,6 @@ header {
 
 #team {
   padding: 0 20%;
-  @include background-size(cover);
-  background-image: image-url('carousel/image2.jpg');
-  background-repeat: no-repeat;
-  background-position: center 0;
   padding-bottom: 70px;
   padding: 0 auto;
   clear: both;
@@ -222,7 +218,6 @@ header {
   .member {
     float: left;
     color: white;
-    width: 230px;
     margin: 10px;
 
     h4 {
