@@ -166,9 +166,19 @@ header {
   background-color: darken($humanaColor, 15%);
   @include box-shadow(inset 0 0 200px 10px darken($humanaColor, 30%));
 
-  div {
-    padding: 20px 0;
-    line-height: 1.2em;
+  .m-container {
+    padding: 60px 0;
+    line-height: 30px;
+    font-weight: 200;
+    p {
+      padding: 7px 0;
+      font-size: 26px;
+      em {
+        font-size: 26px;
+        color: #f89406;
+      }
+
+    }
   }
   cite {
     padding-top: 50px;
