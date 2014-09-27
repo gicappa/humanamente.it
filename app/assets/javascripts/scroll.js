@@ -16,7 +16,9 @@
         });
     };
     $(function(){
-        $('nav li a').scrollToAnchor();
+      $('nav li a').scrollToAnchor();
+      $('section .message a').scrollToAnchor();
+
     });
 
     $('.format_datetime').datetimepicker({language: "it"});
