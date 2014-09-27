@@ -1,8 +1,8 @@
-== humanamente.it
+# humanamente.it
 Website for Psychologist a Lawyer services. 
 Created by Gian Carlo Pace in open source.
 
-=== Deploy
+## Deploy
 There is some issue when deploying. After: 
 
 ```
@@ -12,9 +12,9 @@ $ bundle exec rake assets:precompile
 $ touch tmp/restart.txt
 ```
 
-== Technical details
+## Technical details
 
-= Form
+### Form
 Nome
 Cognome
 Data Nascita
