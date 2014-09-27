@@ -1,21 +1,21 @@
 <!-- Modal -->
 <div id="register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-    <%= bootstrap_form_for @customer, html: {class: "form-horizontal"}, remote: true do |f| %>
+    <%#= bootstrap_form_for @customer, html: {class: "form-horizontal"}, remote: true do |f| %>
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h3 id="registerLabel">Iscrizione</h3>
         </div>
         <div class="modal-body">
-            <%= f.text_field :name, placeholder: 'Mario', help_inline: '' %>
-            <%= f.text_field :surname, placeholder: 'Rossi', help_inline: '' %>
-            <%= f.email_field :email, placeholder: 'me@example.com', help_inline: '' %>
-            <%= f.text_field :birthdate, class: 'format_datetime'  %>
-            <%= f.radio_buttons :sex, { t(:male) => "m", t(:female) => "f" }, { :inline => true } %>
-            <%= f.check_box :privacy %>
+            <%#= f.text_field :name, placeholder: 'Mario', help_inline: '' %>
+            <%#= f.text_field :surname, placeholder: 'Rossi', help_inline: '' %>
+            <%#= f.email_field :email, placeholder: 'me@example.com', help_inline: '' %>
+            <%#= f.text_field :birthdate, class: 'format_datetime'  %>
+            <%#= f.radio_buttons :sex, { t(:male) => "m", t(:female) => "f" }, { :inline => true } %>
+            <%#= f.check_box :privacy %>
         </div>
         <div class="modal-footer">
-            <%= f.submit 'Iscrivimi', class: 'btn btn-warning' %>
-            <%= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
+            <%#= f.submit 'Iscrivimi', class: 'btn btn-warning' %>
+            <%#= button_tag 'Cancel', :type => 'reset', :class => 'btn' %>
         </div>
-    <% end %>
+    <% #end %>
 </div>
