@@ -17,8 +17,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'capistrano'
-gem 'rvm-capistrano'
+# gem 'capistrano'
+# gem 'rvm-capistrano'
 
 gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
 gem 'rails-boilerplate'
