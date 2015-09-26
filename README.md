@@ -1,11 +1,20 @@
-== humanamente.it
-Website for Psycologist a Lawyer services. 
+# humanamente.it
+Website for Psychologist a Lawyer services. 
 Created by Gian Carlo Pace in open source.
 
+## Deploy
+There is some issue when deploying. After: 
 
-== Technical details
+```
+$ cap deploy
+$ bundle exec rake db:migrate
+$ bundle exec rake assets:precompile
+$ touch tmp/restart.txt
+```
 
-= Form
+## Technical details
+
+### Form
 Nome
 Cognome
 Data Nascita
