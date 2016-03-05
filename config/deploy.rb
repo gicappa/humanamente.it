@@ -24,7 +24,7 @@ role :db,  "giankavh"
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 
 
-set :rvm_ruby_string, 'ruby-1.9.2-p290'        # Or whatever env you want it to run in.
+set :rvm_ruby_string, 'ruby-head'        # Or whatever env you want it to run in.
 #set :rvm_type, :system  # Copy the exact line. I really mean :user here
 #set :rvm_type, :user  # Copy the exact line. I really mean :user here
 
@@ -53,7 +53,7 @@ namespace :deploy do
   desc "precompile the assets"
   task :precompile_assets, :roles => :web, :except => { :no_release => true } do
     run "cd #{current_path}; rm -rf public/assets/*"
-    run "cd #{current_path}; RAILS_ENV=production /srv/www/.rvm/gems/ruby-1.9.2-p290/bin/bundle exec rake assets:precompile"
+    run "cd #{current_path}; RAILS_ENV=production bundle exec rake assets:precompile"
   end
 end
 

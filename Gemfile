@@ -18,7 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'capistrano'
-gem 'rvm-capistrano'
+gem  'rvm-capistrano',  require: false
 
 gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
 gem 'rails-boilerplate'
