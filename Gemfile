@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.22'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,7 +26,7 @@ gem 'devise'
 
 gem 'bootstrap_forms'
 gem 'activeadmin'
-gem 'meta_search',    '>= 1.1.0.pre'
+gem 'meta_search', '>= 1.1.0.pre'
 group :test, :development do
   gem 'rspec-rails'
 end
