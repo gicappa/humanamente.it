@@ -1,8 +1,7 @@
-$(function() {
-    console.log("pippo!");
-    $(".parenthood h3").on('click', function(e) {
-      console.log($(this));
-      $(this).next().next().slideToggle(500);
-    });
-  }
-);
+//$(function() {
+//    $(".parenthood h3").on('click', function(e) {
+//      console.log($(this));
+//      $(this).next().next().slideToggle(500);
+//    });
+//  }
+//);
