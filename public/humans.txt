@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  LeadDeveloper: gicappa a.k.a Gian Carlo Pace
-  Site: gianka.it
+  LeadDeveloper: Gian Carlo Pace (gicappa)
+  Site: humanamente.it
   Twitter: @gicappa
-  Location: Milano, Italia/ San Francisco, California, USA
+  Location: Milano, Italia
 
 /* THANKS */
   Names (& URL):
